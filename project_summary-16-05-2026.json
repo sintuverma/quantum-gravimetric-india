@@ -1,0 +1,60 @@
+{
+  "project": "Quantum Gravimetric AI",
+  "version": "v4.1",
+  "date": "2026-05",
+  "data_sources": {
+    "birmingham_quantum_lab": "noise_floor=0.002188,phase=0.881rad",
+    "egm2008_satellite": "466MB_PGM_1arcmin_global",
+    "icgem_bouguer_grid": "87591_pts_0.1deg_India",
+    "litho1_crustal": "1012_nodes_Moho_5-62km",
+    "cop30_dem": "30m_res_7804m_max_Himalaya"
+  },
+  "models": {
+    "himalaya": {
+      "rmse_mGal": 4.010832186223927,
+      "r2": 0.9994776844978333,
+      "n_points": 18704
+    },
+    "plains": {
+      "rmse_mGal": 1.0443409097930185,
+      "r2": 0.9998977184295654,
+      "n_points": 36804
+    },
+    "oceanic": {
+      "rmse_mGal": 2.1468625486143313,
+      "r2": 0.9995176196098328,
+      "n_points": 6030
+    },
+    "tunnel_classifier": {
+      "accuracy_pct": 59.37777777777777,
+      "n_classes": 7
+    },
+    "depth_estimator": {
+      "rmse_meters": 511.6316271254153,
+      "r2": 0.5099960565567017
+    }
+  },
+  "birmingham_sensor": {
+    "noise_floor": 0.00218796452355969,
+    "best_tau_s": 1415.6438526820941,
+    "phase_mean_rad": 0.8812904939374276,
+    "phase_std_rad": 0.009993039312015319,
+    "snr": 27.28104723814119,
+    "sensitivity_ugal": 4.240155545323415e-05,
+    "calib_factor": 0.15451587029711478,
+    "interrogation_t_s": 38.26,
+    "k_eff_rad_per_m": 16100000.0
+  },
+  "honest_limitations": {
+    "target_data": "ICGEM computed Bouguer (satellite-derived, not field)",
+    "gsi_validation": "Pending \u2014 real field data needed",
+    "tunnel_detection": "Synthetic training only; real survey needed",
+    "drdo_readiness": "Proof of concept stage; peer review + GSI validation needed"
+  },
+  "next_steps": [
+    "GitHub upload + NGRI collaboration",
+    "GSI Bhukosh field data validation",
+    "Peer-reviewed publication",
+    "DRDO/ISRO presentation with paper"
+  ]
+}
